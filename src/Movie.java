@@ -22,4 +22,12 @@ public class Movie {
     public void setYearOfRelease(int yearOfRelease) {
         this.yearOfRelease = yearOfRelease;
     }
+
+    @Override
+    public String toString() {
+        return "Movie{" +
+                "title='" + title + '\'' +
+                ", yearOfRelease=" + yearOfRelease +
+                '}';
+    }
 }

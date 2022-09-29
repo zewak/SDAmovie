@@ -27,4 +27,18 @@ public class MovieRepository implements MovieRepositoryApi{
     public int findByTitle(String findTitle) {
         return 0;
     }
+
+
+    public static int addMovie2(String title, int yearOfRelease) {
+        // Main.movies[1] = new Movie("Coś", 1980); test OK
+        for (int i = 0; i < Main.movies.length; i++) {
+            if (Main.movies[i] == null) {
+                Main.movies[i] = new Movie(title, yearOfRelease);
+                return i;
+            }
+
+        }
+
+        return -1;
+    }
 }
